@@ -30,6 +30,8 @@ DEBUT
         i++
     Fin Tantque
 
+    nbre-mot++ //à la fin entre le dernier mot et le point final il n'y pas d'espace c'est ce qui est pris en compte ici
+
     Ecrire("Votre Phrase compte ",nbre-caractere," caractères")
     Ecrire("Votre Phrase compte ",nbre-voyelle," voyelles")
     Ecrire("Votre Phrase compte ",nbre-mot," mots")
