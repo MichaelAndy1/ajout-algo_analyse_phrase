@@ -1,0 +1,37 @@
+ALGORITHME Analyse-phrase
+variables
+    nbre-caractere,nbre-voyelle,nbre-mot,i: entier
+    phrase:string //notons que les chaines de caracteres sont considere comme etant des tableaux
+
+DEBUT
+    Ecrire("entrer une phrase et terminez par un point")
+    Lire (phrase)
+
+    i:= 1;
+    nbre-caractere:=0
+    nbre-mot:=0
+    nbre-voyelle:=0
+
+    Tantque (phrase[i] <> '.') faire //l'exercice prens en compte qu le point et non les autres types de points.
+        Si (phrase[i]) <> '' alors //'' c'est l'espace et notons que les apostrophes n'ont pas été pris en compte dans l'exercice
+            nbre-caractere++ //nbre-caractere++ <=> nbre-caractere := nbre-caractere + 1
+
+            Sinon 
+                nbre-mot++
+                nbre-caractere:= nbre-caractere
+        Fin Si
+
+        Si (phrase[i]='a' ou 'e' ou 'i' ou 'o' ou 'u' ou 'y' ou 'A' ou 'E' OU 'I' ou 'O' ou 'U' ou 'Y') alors
+            nbre-voyelle++
+
+            Sinon
+                nbre-voyelle:= nbre-voyelle
+        Fin Si
+        i++
+    Fin Tantque
+
+    Ecrire("Votre Phrase compte ",nbre-caractere," caractères")
+    Ecrire("Votre Phrase compte ",nbre-voyelle," voyelles")
+    Ecrire("Votre Phrase compte ",nbre-mot," mots")
+    
+FIN
